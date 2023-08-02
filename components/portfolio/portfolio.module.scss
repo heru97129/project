@@ -1,0 +1,22 @@
+@import '../../styles/color.module.scss';
+
+.portfolio {
+    width: 80%;
+    margin: 8em auto;
+
+    &__title {
+        h1 {
+            color: $p-color;
+            font-size: 3.5em;
+        }
+
+    }
+
+    &__gallerie {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2em;
+
+    }
+}

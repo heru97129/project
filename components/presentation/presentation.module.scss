@@ -1,0 +1,32 @@
+@import '../../styles/color.module.scss';
+
+.presentation{
+    display: flex;
+    width: 80%;
+    margin: 6em auto;
+    &__image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        img{
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+
+        }
+    }
+
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 3.5em;
+            margin-bottom: .5em;
+        }
+        width: 100%;
+        color: $p-color;
+    }
+}

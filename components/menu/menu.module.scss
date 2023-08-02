@@ -1,0 +1,35 @@
+@import '../../styles/color.module.scss';
+.menu{
+   
+    background-color: $menu-color;
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    
+    &__logo{
+        width: 10%;
+        svg{
+            width: 20%;
+        }
+    }
+    &__items{
+        ul{
+            margin-right: 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2em;
+            li{
+                color: #bababa;
+                list-style: none;
+                
+            }
+
+        }
+    }
+
+}

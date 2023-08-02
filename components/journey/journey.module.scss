@@ -1,0 +1,81 @@
+
+@import '../../styles/color.module.scss';
+.journey{
+    width: 80%;
+    margin: 10em auto;
+    &__title{
+        text-align: center;
+        h1{
+            font-size: 3.5em;
+            color: $p-color
+        }
+    }
+
+    &__exp{
+        margin-top: 6em;
+        display: flex;
+        justify-content: center;
+        .pro{
+            width: 100%;
+            padding:0  8em;
+
+            &__title{
+                margin-bottom: 3em;
+
+                text-align: center;
+                h2,p{
+                    color: $p-color;
+
+                }
+                  p{
+                    margin-top: .5em;
+                    opacity: .5;
+                }
+            }
+        }
+
+        .school{
+            width: 100%;
+            padding:0  8em;
+      
+            &__title{
+                margin-bottom: 3em;
+                text-align: center;
+                h2,p{
+                    color: $p-color;
+
+                }
+                p{
+                    margin-top: .5em;
+                    opacity: .5;
+                }
+            }
+        }
+
+         .pro__desc{
+            margin: 0 auto;
+            .card-exp{
+             padding: 1.5em;
+             background-color: $background-light;
+             border-radius: 16px;
+             h3,p{
+                color: $p-color;
+             }
+
+             p{
+                margin-top: .5em;
+                opacity: .5;
+             }
+
+             &__details{
+                margin-top: 1em;
+                color: $bright-p;
+                display: flex;
+                justify-content: space-between;
+             }
+            }
+
+         }
+  
+    }
+}

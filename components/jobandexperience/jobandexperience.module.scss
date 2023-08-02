@@ -1,0 +1,45 @@
+
+@import '../../styles/color.module.scss';
+.jobandexperience{
+    height: 60vh;
+    border:1px solid #5c33b338 ;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__container{
+       
+
+        .competence{
+            display: flex;
+            margin-bottom: 2em;
+             gap: 7em;
+            .tag{
+                h4,h2{
+                    color: $p-color;
+                }
+                width: 220px;
+            padding: 2em 0;
+                border:1px solid $second-color;
+                border-radius: 16px;
+                text-align: center;
+                &:nth-child(2){
+                    background-color: $background-light;
+                }
+            }
+        }
+        .exp{
+            display: flex;
+            justify-content: space-between;
+            background-color: $background-light;
+            color: $bright-p;
+
+            padding: 1.5em 2em;
+            border-radius: 16px;
+            text-align: center;
+        }
+    }
+
+}
