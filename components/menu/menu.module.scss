@@ -1,6 +1,6 @@
 @import '../../styles/color.module.scss';
 .menu{
-   
+   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: $menu-color;
     width: 80%;
     margin: 2em auto;
@@ -26,10 +26,17 @@
             li{
                 color: #bababa;
                 list-style: none;
-                
+                cursor: pointer;
             }
 
         }
     }
+
+}
+
+.fixe{
+    position: fixed;
+    top: 5%;
+    left: 5%;
 
 }

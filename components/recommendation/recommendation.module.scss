@@ -1,0 +1,27 @@
+@import '../../styles/color.module.scss';
+
+.recommendation {
+    width: 80%;
+    margin: 6em auto;
+    &__controler {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            color: $p-color;
+            font-size: 3.5em;
+        }
+        .arrows {
+            display: flex;
+            gap: 1em;
+        }
+    }
+
+    &__gallerie {
+        margin-top: 5em;
+        display: flex;
+        gap: 3em;
+
+   
+    }
+}

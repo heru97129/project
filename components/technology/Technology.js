@@ -1,10 +1,15 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import styles from './technology.module.scss'
 import { Span } from '../topspan/Span'
 
-function Technology() {
+function Technology({getboxArea}) {
+   let technoRef = useRef()
+  useEffect(()=>{
+    getboxArea({Skills:technoRef.current.offsetTop})
+  },[])
   return (
-    <div className={styles['technology']}>
+    <div className={styles['technology']} ref={technoRef}>
         <div className={styles['technology__title']}>
           <Span text='🧑‍💻 skills · Expériences' />
           <h1>Technologies et compétences</h1>

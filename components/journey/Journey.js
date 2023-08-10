@@ -1,15 +1,19 @@
 'use client'
 
 import { WorkDoneOrFormation } from '../workdoneorformation/WorkDoneOrFormation';
-import React from 'react'
+import React, { useEffect,useRef } from 'react'
 import styles from './journey.module.scss'
 import { Span } from '../topspan/Span'
 
 let tabJob = new Array(8).fill(0)
 let tabFormation = new Array(6).fill(0)
-function Journey() {
+function Journey({getboxArea}) {
+    let journeyRef = useRef()
+    useEffect(()=>{
+        getboxArea({Carriere:journeyRef.current.offsetTop})
+    },[])
   return (
-    <div className={styles['journey']}>
+    <div className={styles['journey']} ref={journeyRef}>
         <div className={styles['journey__title']}>
         <Span text='💼 Carrière' />
          <h1>Ma trajectoire jusqu'ici</h1>
@@ -22,8 +26,8 @@ function Journey() {
                </div>
 
                    <div className={styles['pro__desc']}>
-                   {tabJob.map(_=>{
-                    return <WorkDoneOrFormation     />
+                   {tabJob.map((_,i)=>{
+                    return <WorkDoneOrFormation   key={i}  />
                    })}
                    </div>
             </div>
@@ -34,8 +38,8 @@ function Journey() {
             </div>
 
                 <div className={styles['school__desc']}>
-                    {tabFormation.map(_=>{
-                        return <WorkDoneOrFormation     />
+                    {tabFormation.map((_,j)=>{
+                        return <WorkDoneOrFormation  key={j}   />
                     })}
                 </div> 
             </div>

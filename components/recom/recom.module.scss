@@ -1,0 +1,23 @@
+@import '../../styles/color.module.scss';
+
+.recoms {
+    padding: 1em;
+    border-radius: 16px;
+    border: 1px solid $bright-p;
+    width: 550px;
+    p {
+        margin: 0.5em 0;
+        color: $p-color;
+    }
+    &__profil {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        h3 {
+            color: $p-color;
+            }
+        p {
+            color: $bright-p;
+        }
+    }
+}

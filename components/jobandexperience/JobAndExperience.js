@@ -1,7 +1,10 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import styles from './jobandexperience.module.scss'
 
 function JobAndExperience() {
+
+
     return (
         <div className={styles['jobandexperience']}>
             <div className={styles['jobandexperience__container']}>

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './menu.module.scss'
 
-export function Menu({}) {
-
-    return <main className={styles['menu']}>
+export function Menu({scrollToArea,menuPosFix}) {
+    console.log(menuPosFix)
+    return <main className={`${styles['menu']} ${styles[menuPosFix ? 'fixe' : '']}`}>
         <div className={styles['menu__logo']}>
             <svg
                 width="37"
@@ -25,13 +25,13 @@ export function Menu({}) {
         </div>
         <div className={styles['menu__items']}>
             <ul>
-                <li>Home</li>
-                <li>Présentation</li>
-                <li>Portfolio</li>
-                <li>Skills</li>
-                <li>Carriere</li>
-                <li>Recommandation</li>
-                <li>Contact</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Home</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Présentation</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Portfolio</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Skills</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Carriere</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Recommandation</li>
+                <li onClick={(e)=> scrollToArea(e.target)}>Contact</li>
 
             </ul>
         </div>
