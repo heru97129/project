@@ -25,14 +25,28 @@ export default function Home() {
     const handleScroll = () => {
         const position = window.scrollY;
         setScrollPosition(position);
-        console.log(Object.values(allTopSection[1]).join(''))
-        if (scrollPosition > Number(Object.values(allTopSection[1]).join(''))) {
+        if(allTopSection?.length > 0){
+
+        if (scrollPosition > Number(Object?.values(allTopSection[1]).join(''))) {
             setMenuPosFix(true)
         } else {
             setMenuPosFix(false)
         }
+        
+    }
     };
     const getboxArea = (e) => {
+        // console.log(e,'box area',data)
+        data.map((section,i)=>{
+            if(Object.keys(section).join('') === Object.keys(e).join('')){
+                if(Object.keys(e).join('')){
+                    section[Object.keys(e).join('')] = Number(Object.values(e)?.join(''))
+
+                }
+                console.log(data,section[Object.keys(e).join('')],Object.keys(e).join(''))
+            }else{
+            }
+        })
           if(data.length === 0){
             data.push({Home:mainRef.current.offsetTop})
           }

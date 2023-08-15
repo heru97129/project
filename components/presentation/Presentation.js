@@ -1,12 +1,20 @@
 'use client'
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import styles from './presentation.module.scss'
 import {Span} from "../topspan/Span";
+import Verify from '../hooks/VerifyWidth';
+
 export function Presentation({getboxArea}) {
        let presentationRef = useRef()
+       let [widthPosition,setWidthPosition] = useState(0)
+       let VerifyWidth = new Verify(setWidthPosition,'pres')
     useEffect(()=>{
-         getboxArea({'Présentation': presentationRef.current.offsetTop})
-    },[])
+        
+        getboxArea({'Présentation': presentationRef.current.offsetTop})
+        VerifyWidth.FindWidth()
+  
+
+    },[widthPosition])
 
 
     return <div className={styles['presentation']} ref={presentationRef}>

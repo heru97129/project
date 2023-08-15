@@ -1,81 +1,243 @@
-
 @import '../../styles/color.module.scss';
-.journey{
+.journey {
     width: 80%;
     margin: 10em auto;
-    &__title{
+    &__title {
         text-align: center;
-        h1{
+        h1 {
             font-size: 3.5em;
-            color: $p-color
+            color: $p-color;
         }
     }
 
-    &__exp{
+    &__exp {
         margin-top: 6em;
         display: flex;
         justify-content: center;
-        .pro{
+        .pro {
             width: 100%;
-            padding:0  8em;
+            padding: 0 8em;
 
-            &__title{
+            &__title {
                 margin-bottom: 3em;
 
                 text-align: center;
-                h2,p{
+                h2,
+                p {
                     color: $p-color;
 
                 }
-                  p{
-                    margin-top: .5em;
-                    opacity: .5;
+                p {
+                    margin-top: 0.5em;
+                    opacity: 0.5;
                 }
             }
         }
 
-        .school{
+        .school {
             width: 100%;
-            padding:0  8em;
-      
-            &__title{
+            padding: 0 8em;
+
+            &__title {
                 margin-bottom: 3em;
                 text-align: center;
-                h2,p{
+                h2,
+                p {
                     color: $p-color;
 
                 }
-                p{
-                    margin-top: .5em;
-                    opacity: .5;
+                p {
+                    margin-top: 0.5em;
+                    opacity: 0.5;
                 }
             }
         }
 
-         .pro__desc{
+        .pro__desc {
             margin: 0 auto;
-            .card-exp{
-             padding: 1.5em;
-             background-color: $background-light;
-             border-radius: 16px;
-             h3,p{
-                color: $p-color;
-             }
+            .card-exp {
+                padding: 1.5em;
+                background-color: $background-light;
+                border-radius: 16px;
+                h3,
+                p {
+                    color: $p-color;
+                }
 
-             p{
-                margin-top: .5em;
-                opacity: .5;
-             }
+                p {
+                    margin-top: 0.5em;
+                    opacity: 0.5;
+                }
 
-             &__details{
-                margin-top: 1em;
-                color: $bright-p;
-                display: flex;
-                justify-content: space-between;
-             }
+                &__details {
+                    margin-top: 1em;
+                    color: $bright-p;
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
 
-         }
-  
+        }
+
     }
+}
+@media(min-width:1281px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media(min-width:1025px) and (max-width:1280px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media(min-width:768px) and (max-width:1024px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media(min-width:481px) and (max-width:767px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media(min-width:320px) and (max-width:480px) {
+
+    /* CSS */
+    .journey {
+        margin: 3em auto;
+        width: auto;
+        padding: 0 1em;
+        &__title {
+            text-align: center;
+            margin-bottom: 5em !important;
+            h1 {
+                font-size: 2.5em;
+                color: $p-color;
+            }
+        }
+
+        &__exp {
+            margin-top: 3em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .pro {
+                padding: 0;
+                width: auto;
+                overflow-x: scroll;
+                &__title {
+                    margin-bottom: 1em;
+
+                    text-align: left;
+                    h2,
+                    p {
+                        color: $p-color;
+
+                    }
+                    p {
+                        margin-top: 0.5em;
+                        opacity: 0.5;
+                    }
+                }
+
+                &__desc {
+                   
+                    width: auto;
+                    overflow-x: scroll;
+                    .inner-desk{
+                        width: fit-content;
+                        display: flex;
+                        gap: 3em;
+                    }
+                    .card-exp {
+                        padding: 1.5em;
+                        width: 350px;
+                        background-color: $background-light;
+                        border-radius: 16px;
+                        h3,
+                        p {
+                            color: $p-color;
+                        }
+
+                        p {
+                            margin-top: 0.5em;
+                            opacity: 0.5;
+                        }
+
+                        &__details {
+                            margin-top: 1em;
+                            color: $bright-p;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+
+                }
+            }
+
+            .school {
+                padding: 0;
+                width: auto;
+                overflow-x: scroll;
+                &__title {
+                    margin-bottom: 1em;
+                    text-align: left;
+                    h2,
+                    p {
+                        color: $p-color;
+
+                    }
+                    p {
+                        margin-top: 0.5em;
+                        opacity: 0.5;
+                    }
+                }
+
+                &__desc {
+                    width: auto;
+                    overflow-x: scroll;
+                    .inner-school{
+                        width: fit-content;
+                        display: flex;
+                        gap: 3em;
+                    }
+                }
+
+            }
+
+        }
+    }
+
 }

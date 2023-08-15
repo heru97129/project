@@ -1,13 +1,20 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef,useState } from 'react'
 import styles from './technology.module.scss'
 import { Span } from '../topspan/Span'
+import Verify from '../hooks/VerifyWidth';
 
 function Technology({getboxArea}) {
    let technoRef = useRef()
+   let [widthPosition,setWidthPosition] = useState(0)
+   let VerifyWidth = new Verify(setWidthPosition,'pres')
   useEffect(()=>{
     getboxArea({Skills:technoRef.current.offsetTop})
-  },[])
+    VerifyWidth.FindWidth()
+  },[widthPosition])
+
+
+
   return (
     <div className={styles['technology']} ref={technoRef}>
         <div className={styles['technology__title']}>

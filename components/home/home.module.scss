@@ -1,9 +1,10 @@
 @import '../../styles/color.module.scss';
 .home{
-    height: 90vh;
+   
+    padding: 5em 0;
     width: 80%;
     margin: 0 auto ;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,5 +52,128 @@ h3,h1,h2{
     }
    
    }
+
+}
+
+
+@media(min-width:1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media(min-width:1025px) and (max-width:1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media(min-width:768px) and (max-width:1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media(min-width:481px) and (max-width:767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media(min-width:320px) and (max-width:480px) {
+  
+  /* CSS */
+  .home{
+    position: relative;
+   
+    padding: 5em 0;
+    width: 100%;
+    margin: 0 auto ;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+h3,h1,h2{
+    color: $p-color;
+ }
+
+   &__pres{
+   margin-top: 3em;
+   margin-left: 2em;x
+    h1{
+
+        font-size: 2.5em;
+    }
+    h3{
+        margin: 1em 0;
+        opacity: 0.5;
+     }
+
+     .reseau{
+     img{
+        &:nth-child(2){
+            margin: 0 1.5em;
+        }
+     }
+     }
+  
+   }
+
+   &__image{
+  
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    img{
+        width:80%;
+        height: 100%;
+        border-radius: 50%;
+    }
+   }
+
+   &__cv{
+    display: none;
+    .cv{
+      h3{
+        color: $second-color !important;
+      }
+    }
+   
+   }
+
+}
 
 }

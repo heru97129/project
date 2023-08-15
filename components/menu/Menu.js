@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+'use client'
+import React, { useEffect,useState } from "react";
 import styles from './menu.module.scss'
 
 export function Menu({scrollToArea,menuPosFix}) {
-    console.log(menuPosFix)
-    return <main className={`${styles['menu']} ${styles[menuPosFix ? 'fixe' : '']}`}>
-        <div className={styles['menu__logo']}>
+        
+     let [changeview,setChangeview] = useState(false)
+
+    return <main className={`${styles['menu']} ${styles[menuPosFix ? 'fixe' : '']} ${styles[menuPosFix && !changeview ? 'width' : '']}`}>
+        <div className={`${styles['menu__logo']} ${styles[menuPosFix && !changeview ? 'wide': '']}`}>
             <svg
+             onClick={()=>{ 
+                setChangeview(e => !e)
+          
+            }}
+                className={styles[menuPosFix ? 'wide': '']}
                 width="37"
                 height="40"
                 viewBox="0 0 37 40"
@@ -25,13 +33,13 @@ export function Menu({scrollToArea,menuPosFix}) {
         </div>
         <div className={styles['menu__items']}>
             <ul>
-                <li onClick={(e)=> scrollToArea(e.target)}>Home</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Présentation</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Portfolio</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Skills</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Carriere</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Recommandation</li>
-                <li onClick={(e)=> scrollToArea(e.target)}>Contact</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Home</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Présentation</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Portfolio</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Skills</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Carriere</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Recommandation</li>
+                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Contact</li>
 
             </ul>
         </div>

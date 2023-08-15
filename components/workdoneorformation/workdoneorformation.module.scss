@@ -28,3 +28,93 @@
        justify-content: space-between;
     }
    }
+
+
+
+   
+@media(min-width:1281px) {
+  
+   /* CSS */
+   
+ }
+ 
+ /* 
+   ##Device = Laptops, Desktops
+   ##Screen = B/w 1025px to 1280px
+ */
+ 
+ @media(min-width:1025px) and (max-width:1280px) {
+   
+   /* CSS */
+   
+ }
+ 
+ /* 
+   ##Device = Tablets, Ipads (portrait)
+   ##Screen = B/w 768px to 1024px
+ */
+ 
+ @media(min-width:768px) and (max-width:1024px) {
+   
+   /* CSS */
+   
+ }
+ 
+ /* 
+   ##Device = Tablets, Ipads (landscape)
+   ##Screen = B/w 768px to 1024px
+ */
+ 
+ @media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+   
+   /* CSS */
+   
+ }
+ 
+ /* 
+   ##Device = Low Resolution Tablets, Mobiles (Landscape)
+   ##Screen = B/w 481px to 767px
+ */
+ 
+ @media(min-width:481px) and (max-width:767px) {
+   
+   /* CSS */
+   
+ }
+ 
+ /* 
+   ##Device = Most of the Smartphones Mobiles (Portrait)
+   ##Screen = B/w 320px to 479px
+ */
+ 
+ @media(min-width:320px) and (max-width:480px) {
+   
+   /* CSS */
+   .card-exp{
+      padding: 1.5em;
+      border-radius: 16px;
+      margin: 2em 0;
+      border: 1px solid $background-light;
+      width: 340px !important;
+      &:nth-child(1){
+          background-color: $background-light;
+  
+      }
+      h3,p{
+         color: $p-color;
+      }
+  
+      p{
+         margin-top: .5em;
+         opacity: .5;
+      }
+  
+      &__details{
+         margin-top: 1em;
+         color: $bright-p;
+         display: flex;
+         justify-content: space-between;
+      }
+     }
+  
+ }

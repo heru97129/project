@@ -12,6 +12,8 @@ function Journey({getboxArea}) {
     useEffect(()=>{
         getboxArea({Carriere:journeyRef.current.offsetTop})
     },[])
+
+    
   return (
     <div className={styles['journey']} ref={journeyRef}>
         <div className={styles['journey__title']}>
@@ -26,9 +28,11 @@ function Journey({getboxArea}) {
                </div>
 
                    <div className={styles['pro__desc']}>
+                    <div className={styles['inner-desk']}>
                    {tabJob.map((_,i)=>{
                     return <WorkDoneOrFormation   key={i}  />
                    })}
+                   </div>
                    </div>
             </div>
             <div className={styles['school']}>
@@ -38,9 +42,11 @@ function Journey({getboxArea}) {
             </div>
 
                 <div className={styles['school__desc']}>
+                    <div className={styles['inner-school']}>
                     {tabFormation.map((_,j)=>{
                         return <WorkDoneOrFormation  key={j}   />
                     })}
+                    </div>
                 </div> 
             </div>
 
