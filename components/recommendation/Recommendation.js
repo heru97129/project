@@ -11,9 +11,13 @@ function Recommendation({getboxArea}) {
     let [widthPosition,setWidthPosition] = useState(0)
     let VerifyWidth = new Verify(setWidthPosition,'pres')
     useEffect(()=>{
-       getboxArea({Recommandation : recommandationRef.current.offsetTop})
+       getboxArea({Recommandation: {
+        top : recommandationRef.current.offsetTop,
+        bottom : recommandationRef.current.offsetTop + recommandationRef.current.offsetHeight
+       }})
        VerifyWidth.FindWidth()
     },[widthPosition])
+
     return (
         <div className={styles['recommendation']} ref={recommandationRef}>
             <div className={styles['recommendation__controler']}>

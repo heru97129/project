@@ -7,7 +7,6 @@ class Verify{
   }
 handleWidth = () => {
     const position = window.innerWidth
- this.setpos(position)
  return position
 }
 

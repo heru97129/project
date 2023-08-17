@@ -10,7 +10,10 @@ export function Presentation({getboxArea}) {
        let VerifyWidth = new Verify(setWidthPosition,'pres')
     useEffect(()=>{
         
-        getboxArea({'Présentation': presentationRef.current.offsetTop})
+        getboxArea({'Présentation': {
+            top : presentationRef.current.offsetTop,
+            bottom : presentationRef.current.offsetTop + presentationRef.current.offsetHeight
+        }})
         VerifyWidth.FindWidth()
   
 

@@ -15,9 +15,11 @@ function Portfolio({getboxArea}) {
     let VerifyWidth = new Verify(setWidthPosition,'port')
 
     useEffect(() => {
-        getboxArea({Portfolio: portfolioRef.current.offsetTop})
+        getboxArea({Portfolio:{
+            top :  portfolioRef.current.offsetTop,
+            bottom :  portfolioRef.current.offsetTop + portfolioRef.current.offsetHeight
+        }})
         VerifyWidth.FindWidth()
-        console.log(widthPosition,'portfo')
     }, [widthPosition])
     return (
         <div className={styles['portfolio']} ref={portfolioRef}>

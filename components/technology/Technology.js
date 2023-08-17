@@ -9,7 +9,10 @@ function Technology({getboxArea}) {
    let [widthPosition,setWidthPosition] = useState(0)
    let VerifyWidth = new Verify(setWidthPosition,'pres')
   useEffect(()=>{
-    getboxArea({Skills:technoRef.current.offsetTop})
+    getboxArea({Skills:{
+      top : technoRef.current.offsetTop,
+      bottom : technoRef.current.offsetTop + technoRef.current.offsetHeight
+    } })
     VerifyWidth.FindWidth()
   },[widthPosition])
 

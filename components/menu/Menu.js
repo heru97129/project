@@ -2,10 +2,25 @@
 import React, { useEffect,useState } from "react";
 import styles from './menu.module.scss'
 
-export function Menu({scrollToArea,menuPosFix}) {
+export function Menu({scrollToArea,menuPosFix,limiteTop}) {
         
      let [changeview,setChangeview] = useState(false)
+     let [linkcolored,setLinkcolored] = useState({Home:false,'Présentation':false,Portfolio:false,Skills:false,Carriere:false,Recommandation:false,Contact:false})
 
+      console.log(limiteTop)
+      function  switchLinkselected(){
+        setLinkcolored({Home:false,'Présentation':true,Portfolio:false,Skills:false,Carriere:false,Recommandation:false,Contact:false})
+        let obj = {Home:false,'Présentation':false,Portfolio:false,Skills:false,Carriere:false,Recommandation:false,Contact:false}
+        obj[limiteTop] = true
+        setLinkcolored({...obj})
+      }
+      useEffect(()=>{
+        switchLinkselected()
+      
+        console.log(limiteTop)
+      },[limiteTop])
+      console.log(linkcolored
+        ,'linksss')
     return <main className={`${styles['menu']} ${styles[menuPosFix ? 'fixe' : '']} ${styles[menuPosFix && !changeview ? 'width' : '']}`}>
         <div className={`${styles['menu__logo']} ${styles[menuPosFix && !changeview ? 'wide': '']}`}>
             <svg
@@ -33,13 +48,13 @@ export function Menu({scrollToArea,menuPosFix}) {
         </div>
         <div className={styles['menu__items']}>
             <ul>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Home</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Présentation</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Portfolio</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Skills</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Carriere</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Recommandation</li>
-                <li className={styles[menuPosFix && !changeview  ? 'hide' : '']} onClick={(e)=> scrollToArea(e.target)}>Contact</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Home ? 'selected' :  '']}`} onClick={(e)=> scrollToArea(e.target)}>Home</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored['Présentation']  ? "selected" :  ""]}`} onClick={(e)=> scrollToArea(e.target)}>Présentation</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Portfolio ? 'selected' :  '' ]}`} onClick={(e)=> scrollToArea(e.target)}>Portfolio</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Skills ? 'selected' :  '']}`} onClick={(e)=> scrollToArea(e.target)}>Skills</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Carriere ? 'selected' :  '']}`} onClick={(e)=> scrollToArea(e.target)}>Carriere</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Recommandation ? 'selected' :  '']}`} onClick={(e)=> scrollToArea(e.target)}>Recommandation</li>
+                <li className={`${styles[menuPosFix && !changeview ? 'hide' : '']} ${styles[linkcolored.Contact ? 'selected' :  '']}`} onClick={(e)=> scrollToArea(e.target)}>Contact</li>
 
             </ul>
         </div>

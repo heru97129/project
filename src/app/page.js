@@ -21,13 +21,22 @@ export default function Home() {
         setAllTopSection] = useState()
     let [menuPosFix,
         setMenuPosFix] = useState(false)
+    let [sectionIn,setSectionIn] = useState('')
 
     const handleScroll = () => {
         const position = window.scrollY;
         setScrollPosition(position);
+console.log(data,position)
+        data.forEach(limit =>{
+             if(Object.values(limit)[0].top /1.2 < position && Object.values(limit)[0].bottom  > position){
+                setSectionIn(Object.keys(limit).join(''))
+                console.log(Object.keys(limit),position)
+             }
+        })
+
         if(allTopSection?.length > 0){
 
-        if (scrollPosition > Number(Object?.values(allTopSection[1]).join(''))) {
+        if (scrollPosition > Number(Object?.values(allTopSection[1])[0].top)) {
             setMenuPosFix(true)
         } else {
             setMenuPosFix(false)
@@ -36,23 +45,25 @@ export default function Home() {
     }
     };
     const getboxArea = (e) => {
-        // console.log(e,'box area',data)
         data.map((section,i)=>{
+            // console.log( e,'tesst')
+
             if(Object.keys(section).join('') === Object.keys(e).join('')){
                 if(Object.keys(e).join('')){
-                    section[Object.keys(e).join('')] = Number(Object.values(e)?.join(''))
+                    section[Object.keys(e).join('')] = Number(Object.values(e)[0].top)
 
                 }
-                console.log(data,section[Object.keys(e).join('')],Object.keys(e).join(''))
             }else{
             }
         })
           if(data.length === 0){
-            data.push({Home:mainRef.current.offsetTop})
+            data.push({Home:{
+                top : mainRef.current.offsetTop,
+                bottom : mainRef.current.offsetTop + window.innerHeight
+            }})
           }
         if (data.length <= 6) {
             data.push(e)
-            console.log(data)
             setAllTopSection([...data])
         }
 
@@ -61,10 +72,10 @@ export default function Home() {
 
         if (e.innerText) {
             let filter = allTopSection.filter(item => Object.keys(item).join('') === e.innerText)
-            console.log(filter[0], 'filter')
+            console.log(Object.values(filter[0])[0].top)
             if (filter[0]) {
                 window.scrollTo({
-                    top: Object.values(filter[0]),
+                    top: Object.values(filter[0])[0].top,
                     left: 0,
                     behavior: 'smooth'
                 })
@@ -84,7 +95,7 @@ export default function Home() {
 
     return (
         <main className={styles.main} ref={mainRef}>
-            <Menu scrollToArea={scrollToArea} menuPosFix={menuPosFix}/>
+            <Menu scrollToArea={scrollToArea} limiteTop={sectionIn}  menuPosFix={menuPosFix}/>
             <HomePage getboxArea={getboxArea}/>
             <JobAndExperience/>
             <Presentation getboxArea={getboxArea}/>

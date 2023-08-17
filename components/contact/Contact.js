@@ -8,7 +8,10 @@ function Contact({getboxArea}) {
     let [widthPosition,setWidthPosition] = useState(0)
     let VerifyWidth = new Verify(setWidthPosition,'pres')
     useEffect( ()=>{
-         getboxArea({Contact : contactRef.current.offsetTop})
+         getboxArea({Contact :{
+            top:  contactRef.current.offsetTop,
+            bottom :  contactRef.current.offsetTop +  contactRef.current.offsetHeight
+         }})
          VerifyWidth.FindWidth()
     },[widthPosition])
   return (

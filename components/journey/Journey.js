@@ -1,17 +1,26 @@
 'use client'
 
 import { WorkDoneOrFormation } from '../workdoneorformation/WorkDoneOrFormation';
-import React, { useEffect,useRef } from 'react'
+import React, { useEffect,useRef,useState} from 'react'
 import styles from './journey.module.scss'
 import { Span } from '../topspan/Span'
+import Verify from '../hooks/VerifyWidth';
 
 let tabJob = new Array(8).fill(0)
 let tabFormation = new Array(6).fill(0)
+
 function Journey({getboxArea}) {
     let journeyRef = useRef()
+    let [widthPosition,setWidthPosition] = useState(0)
+    let VerifyWidth = new Verify(setWidthPosition,'pres')
+
     useEffect(()=>{
-        getboxArea({Carriere:journeyRef.current.offsetTop})
-    },[])
+        getboxArea({Carriere:{
+            top : journeyRef.current.offsetTop,
+            bottom : journeyRef.current.offsetTop  + journeyRef.current.offsetHeight
+        }})
+        VerifyWidth.FindWidth()
+    },[widthPosition])
 
     
   return (
