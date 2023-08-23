@@ -26,9 +26,8 @@ export default function Home() {
     const handleScroll = () => {
         const position = window.scrollY;
         setScrollPosition(position);
-console.log(data,position)
         data.forEach(limit =>{
-             if(Object.values(limit)[0].top /1.2 < position && Object.values(limit)[0].bottom  > position){
+             if(Object.values(limit)[0].top /1.1 < position && Object.values(limit)[0].bottom  > position){
                 setSectionIn(Object.keys(limit).join(''))
                 console.log(Object.keys(limit),position)
              }
@@ -37,9 +36,14 @@ console.log(data,position)
         if(allTopSection?.length > 0){
 
         if (scrollPosition > Number(Object?.values(allTopSection[1])[0].top)) {
+            setTimeout(function () {
             setMenuPosFix(true)
+            },1000)
         } else {
-            setMenuPosFix(false)
+            setTimeout(function () {
+                setMenuPosFix(false)
+
+            },1000)
         }
         
     }
