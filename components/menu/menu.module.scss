@@ -1,6 +1,6 @@
 @import '../../styles/color.module.scss';
-.menu{
-   transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+.menu {
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: $menu-color;
     width: 80%;
     margin: 2em auto;
@@ -9,26 +9,26 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
-    
-    &__logo{
+
+    &__logo {
         width: 10%;
 
-        svg{
+        svg {
             width: 20%;
         }
     }
-    &__items{
-        ul{
+    &__items {
+        ul {
             margin-right: 2em;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 2em;
-            li{
+            li {
                 color: #bababa;
                 list-style: none;
                 cursor: pointer;
-          
+
             }
 
         }
@@ -36,96 +36,273 @@
 
 }
 
-.fixe{
-    transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+.fixe {
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: fixed;
     top: 5%;
-    left: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 
     z-index: 1;
 
-
 }
-.width{
+.width {
     width: 5%;
     display: block !important;
+    opacity: 0.8;
 
 }
-.hide{
+.hide {
     transition: 1s ease-out;
     display: none;
 }
 
-.wide{
+.wide {
     width: 100% !important;
 }
 
-.selected{
-  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  color: rgba(123, 74, 226, 0.50) !important
+.selected {
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: rgba(123, 74, 226, 0.50) !important;
+}
+@media(min-width:1281px) {
+
+    /* CSS */
 
 }
 
-
-@media(min-width:1281px) {
-  
-    /* CSS */
-    
-  }
-  
-  /* 
+/* 
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
   */
-  
-  @media(min-width:1025px) and (max-width:1280px) {
-    
+@media(min-width:1025px) and (max-width:1280px) {
+
     /* CSS */
-    
-  }
-  
-  /* 
+    .menu {
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: $menu-color;
+        width: 90%;
+        margin: 2em auto;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+
+        &__logo {
+            width: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+
+                width: 30%;
+            }
+        }
+        &__items {
+            ul {
+                margin-right: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                li {
+                    color: #bababa;
+                    list-style: none;
+                    cursor: pointer;
+                    font-size: 0.8em;
+
+                }
+
+            }
+        }
+
+    }
+    .width {
+        width: 8%;
+        height: 8%;
+
+    }
+}
+
+/* 
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
   */
-  
-  @media(min-width:768px) and (max-width:1024px) {
-    
+@media(min-width:768px) and (max-width:1024px) {
+
     /* CSS */
-    
-  }
-  
-  /* 
+    .menu {
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: $menu-color;
+        width: 90%;
+        margin: 2em auto;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+
+        &__logo {
+            width: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+
+                width: 40%;
+            }
+        }
+        &__items {
+            ul {
+                margin-right: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                li {
+                    color: #bababa;
+                    list-style: none;
+                    cursor: pointer;
+                    font-size: 0.8em;
+
+                }
+
+            }
+        }
+
+    }
+    .width {
+        width: 8%;
+        height: 8%;
+
+    }
+}
+
+/* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
   */
-  
-  @media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
-    
+@media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+
     /* CSS */
-    
-  }
-  
-  /* 
+    .menu {
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: $menu-color;
+        width: 90%;
+        margin: 2em auto;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+
+        &__logo {
+            width: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+
+                width: 40%;
+            }
+        }
+        &__items {
+            ul {
+                margin-right: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                li {
+                    color: #bababa;
+                    list-style: none;
+                    cursor: pointer;
+                    font-size: 0.8em;
+
+                }
+
+            }
+        }
+
+    }
+    .width {
+        width: 8%;
+        height: 8%;
+
+    }
+}
+
+/* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-  
-  @media(min-width:481px) and (max-width:767px) {
-    
+@media(min-width:481px) and (max-width:767px) {
+
     /* CSS */
-    
-  }
-  
-  /* 
+    .menu {
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: $menu-color;
+        width: 90%;
+        margin: 2em auto;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+
+        &__logo {
+            width: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+
+                width: 40%;
+            }
+        }
+        &__items {
+            ul {
+                margin-right: 2em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                li {
+                    color: #bababa;
+                    list-style: none;
+                    cursor: pointer;
+                    font-size: 0.7em;
+
+                }
+
+            }
+        }
+
+    }
+    .width {
+        width: 8%;
+        height: 8%;
+
+    }
+
+    .wide {
+        width: 30% !important;
+    }
+}
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-  
-  @media(min-width:320px) and (max-width:480px) {
-    
+@media(min-width:320px) and (max-width:480px) {
+
     /* CSS */
-    .menu{
+    .menu {
         display: none !important;
     }
-  }
+}

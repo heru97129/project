@@ -46,6 +46,9 @@ h3,h1,h2{
 
    &__cv{
     .cv{
+      border: 1px solid $second-color;
+      padding: 1em;
+      border-radius:25px;
       h3{
         color: $second-color !important;
       }
@@ -70,7 +73,62 @@ h3,h1,h2{
 @media(min-width:1025px) and (max-width:1280px) {
   
   /* CSS */
+  .home{
+   
+    padding: 5em 0;
+    width: 95%;
+    margin: 0 auto ;
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+h3,h1,h2{
+    color: $p-color;
+ }
+
+   &__pres{
+ 
+    h1{
+
+        font-size: 3.5em;
+    }
+    h3{
+        margin: 1em 0;
+        opacity: 0.5;
+     }
+
+     .reseau{
+     img{
+        &:nth-child(2){
+            margin: 0 1.5em;
+        }
+     }
+     }
   
+   }
+
+   &__image{
+    display: flex;
+    justify-content: center;
+    img{
+        width:85%;
+        height: 450px;
+        border-radius: 50%;
+    }
+   }
+
+   &__cv{
+    .cv{
+
+      h3{
+        color: $second-color !important;
+      }
+    }
+   
+   }
+
+}
 }
 
 /* 
@@ -81,7 +139,62 @@ h3,h1,h2{
 @media(min-width:768px) and (max-width:1024px) {
   
   /* CSS */
+  .home{
+   
+    padding: 5em 0;
+    width: 95%;
+    margin: 0 auto ;
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+h3,h1,h2{
+    color: $p-color;
+ }
+
+   &__pres{
+ 
+    h1{
+
+        font-size: 3.5em;
+    }
+    h3{
+        margin: 1em 0;
+        opacity: 0.5;
+     }
+
+     .reseau{
+     img{
+        &:nth-child(2){
+            margin: 0 1.5em;
+        }
+     }
+     }
   
+   }
+
+   &__image{
+    display: flex;
+    justify-content: center;
+    img{
+        width:85%;
+        height: 450px;
+        border-radius: 50%;
+    }
+   }
+
+   &__cv{
+    .cv{
+
+      h3{
+        color: $second-color !important;
+      }
+    }
+   
+   }
+
+}
 }
 
 /* 
@@ -92,7 +205,67 @@ h3,h1,h2{
 @media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
   
   /* CSS */
+  .home{
+    position: relative;
+   
+    padding: 5em 0;
+    width: 100%;
+    margin: 0 auto ;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+h3,h1,h2{
+    color: $p-color;
+ }
+
+   &__pres{
+   margin-top: 3em;
+   margin-left: 2em;x
+    h1{
+
+        font-size: 3.5em !important
+    }
+    h3{
+        margin: 1em 0;
+        opacity: 0.5;
+     }
+
+     .reseau{
+     img{
+        &:nth-child(2){
+            margin: 0 1.5em;
+        }
+     }
+     }
   
+   }
+
+   &__image{
+  
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    img{
+        width:60%;
+        height: 100%;
+        border-radius: 50%;
+    }
+   }
+
+   &__cv{
+    display: none;
+    .cv{
+      h3{
+        color: $second-color !important;
+      }
+    }
+   
+   }
+
+}
 }
 
 /* 
@@ -103,7 +276,67 @@ h3,h1,h2{
 @media(min-width:481px) and (max-width:767px) {
   
   /* CSS */
+  .home{
+    position: relative;
+   
+    padding: 5em 0;
+    width: 100%;
+    margin: 0 auto ;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+h3,h1,h2{
+    color: $p-color;
+ }
+
+   &__pres{
+   margin-top: 3em;
+   margin-left: 2em;x
+    h1{
+
+        font-size: 3.5em !important
+    }
+    h3{
+        margin: 1em 0;
+        opacity: 0.5;
+     }
+
+     .reseau{
+     img{
+        &:nth-child(2){
+            margin: 0 1.5em;
+        }
+     }
+     }
   
+   }
+
+   &__image{
+  
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    img{
+        width:60%;
+        height: 100%;
+        border-radius: 50%;
+    }
+   }
+
+   &__cv{
+    display: none;
+    .cv{
+      h3{
+        color: $second-color !important;
+      }
+    }
+   
+   }
+
+}
 }
 
 /* 

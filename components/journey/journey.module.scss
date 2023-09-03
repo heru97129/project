@@ -51,10 +51,36 @@
                     opacity: 0.5;
                 }
             }
+           
         }
-
+        .school__desc{
+            &::-webkit-scrollbar{
+                width: 5px !important;
+                height: 5px !important;
+                  
+                
+              
+              }
+              
+              &::-webkit-scrollbar-thumb {
+                background-color: darkgrey !important;
+                outline: 1px solid slategrey !important;
+              } 
+        }
         .pro__desc {
             margin: 0 auto;
+            &::-webkit-scrollbar{
+                width: 5px !important;
+                height: 5px !important;
+                  
+                
+              
+              }
+              
+              &::-webkit-scrollbar-thumb {
+                background-color: darkgrey !important;
+                outline: 1px solid slategrey !important;
+              }
             .card-exp {
                 padding: 1.5em;
                 background-color: $background-light;
@@ -81,10 +107,28 @@
 
     }
 }
-@media(min-width:1281px) {
+@media (min-width:1281px) and (max-width : 1650px) {
 
     /* CSS */
+    .journey {
+        width: 90%;
 
+        &__exp {
+
+            .pro {
+                width: 100%;
+                padding: 0 4em;
+
+            }
+
+            .school {
+                width: 100%;
+                padding: 0 4em;
+
+            }
+
+        }
+    }
 }
 
 /* 
@@ -94,7 +138,25 @@
 @media(min-width:1025px) and (max-width:1280px) {
 
     /* CSS */
+    .journey {
+        width: 90%;
 
+        &__exp {
+
+            .pro {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+            .school {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+        }
+    }
 }
 
 /* 
@@ -104,7 +166,25 @@
 @media(min-width:768px) and (max-width:1024px) {
 
     /* CSS */
+    .journey {
+        width: 95%;
 
+        &__exp {
+
+            .pro {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+            .school {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+        }
+    }
 }
 
 /* 
@@ -114,7 +194,25 @@
 @media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
 
     /* CSS */
+    .journey {
+        width: 95%;
 
+        &__exp {
+
+            .pro {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+            .school {
+                width: 100%;
+                padding: 0 2em;
+
+            }
+
+        }
+    }
 }
 
 /* 
@@ -124,7 +222,25 @@
 @media(min-width:481px) and (max-width:767px) {
 
     /* CSS */
+    .journey {
+        width: 100%;
 
+        &__exp {
+            flex-direction: column;
+            .pro {
+                width: 100%;
+                padding: 0 3em;
+
+            }
+
+            .school {
+                width: 100%;
+                padding: 0 3em;
+
+            }
+
+        }
+    }
 }
 
 /* 
@@ -152,11 +268,12 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            gap: 3em;
 
             .pro {
                 padding: 0;
                 width: auto;
-                overflow-x: scroll;
+          
                 &__title {
                     margin-bottom: 1em;
 
@@ -173,10 +290,10 @@
                 }
 
                 &__desc {
-                   
+
                     width: auto;
                     overflow-x: scroll;
-                    .inner-desk{
+                    .inner-desk {
                         width: fit-content;
                         display: flex;
                         gap: 3em;
@@ -210,7 +327,7 @@
             .school {
                 padding: 0;
                 width: auto;
-                overflow-x: scroll;
+             
                 &__title {
                     margin-bottom: 1em;
                     text-align: left;
@@ -228,7 +345,7 @@
                 &__desc {
                     width: auto;
                     overflow-x: scroll;
-                    .inner-school{
+                    .inner-school {
                         width: fit-content;
                         display: flex;
                         gap: 3em;

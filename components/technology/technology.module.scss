@@ -65,7 +65,55 @@
   @media(min-width:1025px) and (max-width:1280px) {
     
     /* CSS */
-    
+    .technology{
+      width: 95%;
+      margin: 6em auto;
+      &__title{
+          text-align: center;
+          h1{
+              font-size: 3.5em;
+              color: $p-color;
+          }
+  
+      }
+  
+      &__stack{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              gap: 2em;
+          }
+      }
+  
+      &__stack2{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              gap: 3em;
+          }
+      }
+  }
+  
   }
   
   /* 
@@ -76,7 +124,57 @@
   @media(min-width:768px) and (max-width:1024px) {
     
     /* CSS */
-    
+    .technology{
+      width: 95%;
+      margin: 6em auto;
+      &__title{
+          text-align: center;
+          h1{
+              font-size: 3.5em;
+              color: $p-color;
+          }
+  
+      }
+  
+      &__stack{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              gap: 1em;
+              display: grid;
+              grid-template-columns: repeat(5,1fr);
+              gap: 3em;
+          }
+      }
+  
+      &__stack2{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              gap: 1em;
+          }
+      }
+  }
   }
   
   /* 
@@ -87,7 +185,57 @@
   @media(min-width:768px) and (max-width:1024px) and (orientation:landscape) {
     
     /* CSS */
-    
+    .technology{
+      width: 95%;
+      margin: 6em auto;
+      &__title{
+          text-align: center;
+          h1{
+              font-size: 3.5em;
+              color: $p-color;
+          }
+  
+      }
+  
+      &__stack{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              display: grid;
+              grid-template-columns: repeat(5,1fr);
+              gap: 3em;
+              gap: 2em;
+          }
+      }
+  
+      &__stack2{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: flex;
+              gap: 2em;
+          }
+      }
+  }
   }
   
   /* 
@@ -98,7 +246,59 @@
   @media(min-width:481px) and (max-width:767px) {
     
     /* CSS */
-    
+    .technology{
+      width: 100%;
+      margin: 6em auto;
+      padding: 0 1em;
+      &__title{
+          text-align: center;
+          h1{
+              font-size: 2.5em;
+              color: $p-color;
+          }
+  
+      }
+  
+      &__stack{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: grid;
+              grid-template-columns: repeat(5,1fr);
+              gap: 3em;
+          }
+      }
+  
+      &__stack2{
+          
+          h4{
+              color: $p-color;
+              margin-bottom: 2em;
+              text-align: center;
+          }
+          margin-top: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+  
+          .icone-stack{
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap: 3em;
+              gap: 3em;
+          }
+      }
+  }
   }
   
   /* 
