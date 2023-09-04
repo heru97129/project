@@ -14,6 +14,9 @@ h3,h1,h2{
  }
 
    &__pres{
+    .svgLogo{
+      display: none;
+    }
  
     h1{
 
@@ -76,7 +79,7 @@ h3,h1,h2{
   .home{
    
     padding: 5em 0;
-    width: 95%;
+    width: 85%;
     margin: 0 auto ;
     min-height: 90vh;
     display: flex;
@@ -294,7 +297,18 @@ h3,h1,h2{
 
    &__pres{
    margin-top: 3em;
-   margin-left: 2em;x
+   margin-left: 2em;
+   .svgLogo{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+
+  }
     h1{
 
         font-size: 3.5em !important
@@ -365,7 +379,20 @@ h3,h1,h2{
 
    &__pres{
    margin-top: 3em;
-   margin-left: 2em;x
+   margin-left: 2em;
+
+   .svgLogo{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+
+  }
+
     h1{
 
         font-size: 2.5em;
