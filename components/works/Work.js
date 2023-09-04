@@ -7,10 +7,10 @@ export function Work({title,desc,imge,techno,link}) {
             <p>{desc}</p>
         </div>
         <div className={styles['travaux__description']}>
-            {techno.map(data =>{
+            {techno.map((data,i) =>{
              
 
-             return <span >{data}</span>
+             return <span key={i} >{data}</span>
 
             })}
      

@@ -29,7 +29,7 @@ export default function Home() {
         data.forEach(limit =>{
              if(Object.values(limit)[0].top /1.1 < position && Object.values(limit)[0].bottom  > position){
                 setSectionIn(Object.keys(limit).join(''))
-                console.log(Object.keys(limit),position)
+              
              }
         })
 
