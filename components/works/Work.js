@@ -1,17 +1,23 @@
 import React from "react";
 import styles from './work.module.scss'
-export function Work({}) {
+export function Work({title,desc,imge,techno,link}) {
     return <div className={styles['travaux']}>
         <div className={styles['travaux__title']}>
-            <h3>Move it</h3>
-            <p>Aplicação da NLW#04 da Rocketseat. Desenvolvida com React. Plataforma de
-                Pomodoro com exercícios.</p>
+            <h3>{title}</h3>
+            <p>{desc}</p>
         </div>
         <div className={styles['travaux__description']}>
-            <span>Online</span>
-            <span>Typescript</span>
+            {techno.map(data =>{
+             
 
-            <img src='images/image 1.png'/>
+             return <span >{data}</span>
+
+            })}
+     
+             <a href={link}>
+             <img src={imge}/>
+             </a>
+    
 
         </div>
 

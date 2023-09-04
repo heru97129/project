@@ -5,7 +5,55 @@ import styles from './portfolio.module.scss'
 import {Span} from '../topspan/Span'
 import Verify from '../hooks/VerifyWidth';
 
-let tab = new Array(8).fill(0)
+let tab = [{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG',
+    link : "https://www.tehuti-book.com/"
+},{
+    title : 'Chagpt Clone',
+    desc : 'Project personnel qui propose des services identiques à chatgpt utilisant l\'api de openai pour la partie chatbot',
+    techno : ['Next.js','sass','ApiRest'],
+    imge: 'images/apichatgpt.PNG',
+    link : "https://apichagpt-8h1o-2yfe0z287-heru97129.vercel.app/"
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},
+{
+    title : 'Tehuti',
+    desc : 'Project personnel qui propose des livres à achetés ainsi que des articles à consultées pour les lecteurs',
+    techno : ['Next.js','sass','firebase'],
+    imge: 'images/tehuti.PNG'
+},]
 
 function Portfolio({getboxArea}) {
     let portfolioRef = useRef()
@@ -29,8 +77,9 @@ function Portfolio({getboxArea}) {
             </div>
 
             <div className={styles['portfolio__gallerie']}>
-                {tab.map((_, i) => {
-                    return <Work key={i}/>
+                {tab.map((data, i) => {
+                    const {techno,title,desc,imge,link} = data
+                    return <Work techno={techno} link={link} title={title} desc={desc} imge={imge} key={i}/>
 
                 })
 }
