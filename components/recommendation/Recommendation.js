@@ -6,7 +6,7 @@ import Verify from '../hooks/VerifyWidth';
 
 
 let arrayRecoms = [{
-  text : `Je suis ravi de recommander chaleureusement Grégory pour ses compétences exceptionnelles en développement front-end, 
+  text : `Je souhaite recommander vivement Grégory pour ses compétences  en développement front-end, 
   démontrées lors de la création de notre newsletter à l'agence Black Lemon. Grégory a non seulement délivré une newsletter visuellement attrayante, 
   mais il a également assuré une expérience utilisateur fluide et efficace pour nos abonnés.`,
   person:'Romain Guillou',

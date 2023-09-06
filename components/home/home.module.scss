@@ -51,6 +51,7 @@ h3,h1,h2{
     .cv{
       border: 1px solid $second-color;
       padding: 1em;
+      cursor: pointer;
       border-radius:25px;
       h3{
         color: $second-color !important;
