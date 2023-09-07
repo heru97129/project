@@ -1,0 +1,32 @@
+.nav{
+    display: flex;
+    width: 100%;
+    padding:1em  3em;
+    justify-content: space-between;
+    align-items: center;
+    &__icones{
+
+    }
+    &__menu{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 4em ;
+            font-weight: bolder;
+        }
+  
+
+    }
+    &__features{
+   
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 2em ;
+        
+
+    }
+}
