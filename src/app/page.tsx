@@ -5,6 +5,7 @@ import {  useState } from 'react'
 import type { RootState } from '../app/GlobalRedux/store'
 
 import BasicLayout from './basic-layout/BasicLayout'
+import HomePage from '../../components/homepage/HomePage'
 
 function Home() {
 
@@ -15,7 +16,7 @@ function Home() {
   return ( 
     <main>
    <BasicLayout >
-    
+    <HomePage />
 <button onClick={()=>dispatch(increment())}>increment</button>
     <button onClick={()=>dispatch(decrement())}>decrement</button>
     <button onClick={()=>dispatch(incrementByAmount(2))}>increment by 2</button>

@@ -1,0 +1,13 @@
+.range{
+    width: 100%;
+    padding: 4em 0;
+    text-align: center;
+    &__images{
+        margin: 4em auto 0 auto;
+     width: 80%;
+     display: flex;
+     gap: 2em;
+     justify-content: center;
+     align-items: center;
+    }
+}

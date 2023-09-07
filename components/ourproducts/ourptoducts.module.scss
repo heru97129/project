@@ -1,0 +1,24 @@
+@import '../../styles/color.module.scss';
+
+.ourpro{
+    text-align: center;
+    width: 100%;
+    padding:  4em 0 ;
+    &__grid-card{
+        width: 80%;
+        margin:  4em auto 0 auto;
+        display: grid;
+        gap: 2em;
+        grid-template-columns: repeat(4,1fr);
+
+    }
+    &__show-more{
+        width: 200px;
+        margin: 3em auto;
+        padding: 1em 3em;
+        border: 1px solid $primary;
+        color: $primary;
+        font-weight: bolder;
+        
+    }
+}
