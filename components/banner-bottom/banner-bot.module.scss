@@ -1,0 +1,26 @@
+@import '../../styles/color.module.scss';
+
+.banner-bot{
+    padding: 3em 0;
+    background-color: $secondary;
+    text-align: left;
+    width: 100%;
+
+    .container{
+        justify-content:space-between;
+        align-items: center;
+        width: 95%;
+        display: flex;
+        margin: 0 auto;
+    }
+    .items{
+        gap:1em;
+        display: flex;
+        align-items: center;
+        p{
+            opacity: .8;
+            font-size: 1.3em;
+        }
+    }
+    
+}

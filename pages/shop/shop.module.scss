@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import '../../styles/color.module.scss';
+
+.shop{
+    background-color: #F5F5F5;
+
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif !important;
+
+
+    &__all-prod{
+        width: 80%;
+        padding: 3em 0;
+        margin: 0 auto;
+        .gallery{
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(4,1fr);
+
+        }
+       .pages{
+        margin-top: 2em;
+        width: 100%;
+        padding: 2em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            display: flex;
+            gap: 2em;
+            span{
+                border-radius: 16px;
+                padding: 1em 2em;
+                background-color: $secondary;
+                display: block;
+                font-weight: 500;
+                &:nth-child(1){
+                    background-color: $third;
+                }
+            }
+        }
+       }
+
+    }  
+
+
+
+
+}

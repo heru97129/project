@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../pages/globals.css";
 
 function MyApp({Component,pageProps}) {
 

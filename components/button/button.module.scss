@@ -1,8 +1,12 @@
 @import '../../styles/color.module.scss';
 .button{
     padding: 1em 3em;
-    background-color: $primary;
+    max-width: 300px;
+    min-width: 100px;
+    text-align: center;
+    margin: 4em auto;
+    border: 1px solid $primary;   
     font-weight: bolder;
-    border: 1px solid transparent;
     color: white;
+    
 }

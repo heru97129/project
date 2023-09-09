@@ -1,0 +1,51 @@
+@import '../../styles/color.module.scss';
+
+.informations {
+
+    margin-top: 4em;
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        &__banner {
+
+            margin-bottom: 3em;
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 3em;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5em;
+
+                li {
+                    opacity: 0.6;
+                    &:nth-child(1) {
+                        opacity: 1 !important;
+                    }
+                }
+
+            }
+        }
+
+        &__content {
+            width: 80%;
+            margin: 0 auto;
+            p {
+                width: 90%;
+                margin: 1em auto;
+            }
+            .images {
+                display: flex;
+                gap: 1em;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                div {
+                    width: 100%;
+                    background-color: $secondary;
+                }
+            }
+        }
+
+    }
+}

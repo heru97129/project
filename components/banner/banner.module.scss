@@ -1,0 +1,12 @@
+@import '../../styles//color.module.scss';
+
+.banner{
+    background-color: $secondary;
+    padding: 2em 0 2em 3em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    span{
+        display: block;
+    }
+    }

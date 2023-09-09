@@ -2,12 +2,15 @@
 import React from 'react'
 import styles from './nav.module.scss'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 
 
 
 function Nav() {
   console.log('nav compo ')
+  let route = useRouter()
+
     return (
         <main className={styles['nav']}>
             <div className={styles['nav__icones']}>
@@ -15,10 +18,10 @@ function Nav() {
             </div>
             <div className={styles['nav__menu']}>
                 <ul>
-                    <li>Home</li>
-                    <li>Shop</li>
+                    <li onClick={()=> route.push('/')}>Home</li>
+                    <li onClick={()=> route.push('/shop')}>Shop</li>
                     <li>About</li>
-                    <li>Contact</li>
+                    <li onClick={()=> route.push('/contact')}>Contact </li>
                 </ul>
             </div>
             <div className ={styles['nav__features']}>

@@ -1,0 +1,92 @@
+@import '../../../styles/color.module.scss';
+
+.article{
+    hr{
+        opacity: .4;
+        margin: 4em 0;
+    }
+
+
+    &__content{
+        width: 100%;
+        padding: 4em 0;
+        .container {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+        gap: 8em;
+        display: flex;
+
+ 
+
+    }
+
+   }
+
+   &__informations{
+  
+    margin-top: 4em;
+   .container{
+     width: 80%;
+     margin: 0 auto;
+     &__banner{
+        
+        margin-bottom: 3em;
+        ul{
+            display: flex;
+            list-style: none;
+            gap: 3em;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em ;
+        
+            li{
+                opacity: .6;
+              &:nth-child(1){
+                opacity: 1 !important;
+              }
+            }
+
+
+        }
+     }
+
+     &__content{
+        width: 80%;
+        margin: 0 auto;
+        p{
+            width: 90%;
+            margin: 1em auto;
+        }
+        .images{
+            display: flex;
+            gap: 2em;
+            width: 100%;
+            div{
+                background-color: $secondary;
+            }
+        }
+     }
+
+   }  
+ }
+
+ 
+ &__related-prod{
+    h1{
+        text-align: center;
+    }
+    .related{
+        width: 100%;
+        margin: 3em 0 ;
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+
+    }
+ }
+
+}
+.space{
+    margin: 1em 0;
+}
