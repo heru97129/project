@@ -1,0 +1,76 @@
+@import '../../styles/color.module.scss';
+
+.footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    background-color: $secondary;
+    width: 100%;
+    padding: 4em 0;
+    &__container{
+        width: 80%;
+        margin: 0 auto;
+        padding: 3em 0;
+        display: flex;
+        justify-content: space-between;
+            .logo{
+                width: 50%;
+                h2{
+                    margin-bottom: 2em;
+                }
+                p{
+                    font-size: 1.2em ;
+                    opacity: .7;
+                }
+            }
+        .options{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            div{
+                &:nth-child(3){
+                    ul{
+                        li{
+                            &:nth-child(2){
+                                display: flex;
+                                gap: .5em;
+                                div{
+                                    border-bottom: 1px solid black;
+
+                                }
+
+                            }
+                        }
+                    }
+                    input{
+                        background: transparent;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid black;
+                        
+                    }
+                }
+            }
+            ul{
+                list-style: none;
+                li{
+                    margin-bottom: 1.5em;
+                    &:nth-child(1){
+                        opacity: .8;
+                        margin-bottom: 3em;
+
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        width: 80%;
+        margin: 2em auto;
+        hr{
+            margin: .5em;
+            border-top: 1px solid rgba(0, 0, 0, 0.16);
+
+        }
+    }
+
+
+}

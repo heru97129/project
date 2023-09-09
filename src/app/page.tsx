@@ -17,10 +17,7 @@ function Home() {
     <main>
    <BasicLayout >
     <HomePage />
-<button onClick={()=>dispatch(increment())}>increment</button>
-    <button onClick={()=>dispatch(decrement())}>decrement</button>
-    <button onClick={()=>dispatch(incrementByAmount(2))}>increment by 2</button>
-   <span>{count}</span> 
+
 
 
    </BasicLayout >

@@ -1,6 +1,7 @@
 
 
 import Nav from "../../../components/Nav/Nav"
+import Footer from "../../../components/footer/Footer"
 
 export default function BasicLayout({
     children, // will be a page or nested layout
@@ -13,6 +14,8 @@ export default function BasicLayout({
         <Nav />
    
         {children}
+
+        <Footer />
       </section>
     )
   }
