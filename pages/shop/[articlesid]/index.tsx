@@ -91,7 +91,7 @@ function index({params}) {
                             })}
                         </div>
 
-                        <Button text='Show More' bkg={false} />
+                        <Button text='Show More' bkg={false} center={true} />
 
                     </div>
                 </div>

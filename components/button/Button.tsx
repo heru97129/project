@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './button.module.scss'
 
-function Button({text,bkg}) {
+function Button({text,bkg,center}) {
 
  let  primary = '#B88E2F'
  let white = '#fff'
@@ -18,7 +18,7 @@ function Button({text,bkg}) {
     }
    },[bkg])
   return (
-    <div className={`${styles['button']}`} style={{backgroundColor:color,color:textcolor}}>
+    <div className={`${styles['button']} ${styles[center ? 'center': '']}`} style={{backgroundColor:color,color:textcolor}}>
 
 {text}
     </div>

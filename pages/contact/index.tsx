@@ -66,10 +66,10 @@ function index() {
                         </div>
                         <div className={styles['right__inp']}>
                             <h3>Message</h3>
-                            <input placeholder='Hi! i’d like to ask abou3' />
+                            <textarea placeholder='Hi! i’d like to ask abou3' />
                         </div>
 
-                        <Button text='Submit' bkg={true} />
+                        <Button text='Submit' bkg={true} center={false} />
                     </div>
                 </div>
             </div>

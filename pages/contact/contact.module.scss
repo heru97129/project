@@ -15,25 +15,36 @@ padding: 6em 0;
 
     &__contact{
       
-        width: 70%;
+        width: 60%;
         margin: 5em auto;
         display: flex;
+        justify-content: center;
+        
         .left{
             width: 100%;
             &__adress{
 
                 display: flex;
                 gap: 1em;
+                h2{
+                    margin-bottom: .5em;
+                }
             }
             &__phone{
                 margin: 3em 0;
                 display: flex;
                 gap: 1em;
+                h2{
+                    margin-bottom: .5em;
+                }
 
             }
             &__working{
                 display: flex;
                 gap: 1em;
+                h2{
+                    margin-bottom: .5em;
+                }
             }
         }
         .right{
@@ -52,17 +63,17 @@ padding: 6em 0;
                 
             }
 
-            &:last-child{
+             &:nth-child(4){
+                margin-bottom: 3em;
+               textarea{
+                padding: 2em 1em;
+                min-height: 150px;
+                width: 100%;
                 outline: none;
-                input{
-                    margin-top: 1EM;
-                    padding:3EM 1EM;
-                    width: 100%;
-                    border-radius: 16px;
-                    outline: none;
-                    border: 1px solid rgba(0, 0, 0, 0.497);
-            }
-            }
+                border: 1px solid rgba(0, 0, 0, 0.451);
+                border-radius: 16px;
+               }
+             }
             }
            
         }
