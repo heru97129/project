@@ -1,9 +1,10 @@
 @import '../../styles/color.module.scss';
 
 .banner-bot{
-    padding: 3em 0;
+    padding: 5em 0;
     background-color: $secondary;
     text-align: left;
+    margin-bottom: 2em;
     width: 100%;
 
     .container{

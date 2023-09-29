@@ -1,11 +1,11 @@
 import React from "react";
 import styles from './text-article.module.scss'
 
-export function TextArticle({}) {
+export function TextArticle({title}) {
     return <div className={styles["text"]}>
         <div className={styles["article-desc"]}>
             <div className={styles["article-desc__presentation"]}>
-                <h1>Asgaard sofa</h1>
+                <h1>{title}</h1>
                 <h2>Rs. 250,000.00</h2>
                 <div className={styles['stars']}>
                     <span></span>

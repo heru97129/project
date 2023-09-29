@@ -2,7 +2,10 @@
     position: relative;
     background-color: #ffffff;
     border-radius: 16px;
-   width: 350px;
+
+   img{
+    width: 100% !important;
+   }
     &__text{
         padding: 2em 1em;
         text-align: left;

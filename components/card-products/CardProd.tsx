@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation'
 
 function CardProd({title,desc,price,images,label}) {
   let route = useRouter()
+
   return (
     <div className={styles['card-prod']} onClick={()=> route.push(`/shop/${title}`)} >
       {label !== ''  &&  <span className={styles['card-prod__label']}>

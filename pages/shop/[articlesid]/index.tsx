@@ -63,7 +63,7 @@ function index({params}) {
                     <div className={styles['article__content']}>
                         <div className={styles["container"]}>
                             <Gallery tabGallery={tabarticle}/>
-                            <TextArticle/>
+                            <TextArticle title={articlesid}/>
                         </div>
 
                     </div>

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styles from './ourptoducts.module.scss'
 import CardProd from '../card-products/CardProd'
@@ -11,19 +12,19 @@ let tabProducts = [
         label: '/images/our-products/Label50.png'
 
     }, {
-        title: 'Sytherine',
+        title: 'Leviosa',
         images: '/images/our-products/images2.png',
         desc: 'Stylish cafe chair',
         price: '600 $',
         label: ''
     }, {
-        title: 'Sytherine',
+        title: 'Lolito',
         images: '/images/our-products/images3.png',
         desc: 'Stylish cafe chair',
         price: '6000 $',
         label: '/images/our-products/Labelnew.png'
     }, {
-        title: 'Sytherine',
+        title: 'Respira',
         images: '/images/our-products/images4.png',
         desc: 'Stylish cafe chair',
         price: '6000 $',
@@ -35,21 +36,21 @@ let tabProducts = [
         price: '6000 $',
         label: ''
     }, {
-        title: 'Sytherine',
+        title: 'Epura',
         images: '/images/our-products/images6.png',
         desc: 'Stylish cafe chair',
         price: '6000 $',
         label: '/images/our-products/Labelnew.png'
     }, {
-        title: 'Sytherine',
+        title: 'Varioza',
         images: '/images/our-products/images7.png',
         desc: 'Stylish cafe chair',
         price: '6000 $',
         label: '/images/our-products/Label50.png'
     }, {
-        title: 'Sytherine',
+        title: 'Comercia',
         images: '/images/our-products/images8.png',
-        desc: 'Stylish cafe chair',
+        desc: 'Living room',
         price: '6000 $',
         label: '/images/our-products/Labelnew.png'
     }
@@ -57,6 +58,7 @@ let tabProducts = [
 
 
 function OurProducts() {
+    console.log(tabProducts,'tab')
     return (
         <div className={styles['ourpro']}>
             <h1>
@@ -66,7 +68,9 @@ function OurProducts() {
             <div className={styles['ourpro__grid-card']}>
                 {tabProducts.map((data, i) => {
                     const {title, desc, images, price, label} = data
+                    console.log(title)
                     return <CardProd
+                    key={i}
                         images={images}
                         label={label}
                         price={price}
